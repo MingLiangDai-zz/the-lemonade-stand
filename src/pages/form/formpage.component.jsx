@@ -212,7 +212,7 @@ class FormPage extends React.Component {
             ))}
           </div>
           <div className="footer">
-            <span>
+            <h4>
               Total: $
               {this.state.lemonades
                 .reduce((accul, lemonade) => {
@@ -222,7 +222,7 @@ class FormPage extends React.Component {
                   return accul + quantity * lemonade.price;
                 }, 0)
                 .toFixed(2)}
-            </span>
+            </h4>
             <Button type="submit">Submit Transaction</Button>
             <Button
               variant="danger"
