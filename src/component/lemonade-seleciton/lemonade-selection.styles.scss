@@ -1,0 +1,51 @@
+.lemonade-selection {
+  text-align: center;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  font-size: 18px;
+  box-sizing: border-box;
+
+  .image-container {
+    box-sizing: border-box;
+    width: 75%;
+    align-self: center;
+    height: 50%;
+    border-radius: 10%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .quantity {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    input {
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      border: none;
+      background-color: rgb(238, 238, 238);
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  .lemonade-selection {
+    width: 50%;
+  }
+}
+
+@media (min-width: 700px) {
+  .lemonade-selection {
+    width: 25%;
+    max-width: 1000px;
+  }
+}

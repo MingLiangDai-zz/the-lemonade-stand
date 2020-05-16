@@ -1,0 +1,24 @@
+.transaction-list {
+  box-sizing: border-box;
+  margin: 10px 5%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  text-align: left;
+  padding: 3px;
+  p {
+    margin: 0;
+    line-height: 1.3em;
+  }
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

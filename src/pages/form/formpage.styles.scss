@@ -1,0 +1,23 @@
+.lemonade-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 2% 5%;
+  border: grey solid 1px;
+  border-radius: 10px;
+}
+
+.date {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
