@@ -1,7 +1,6 @@
 import React from "react";
 import "./formpage.styles.scss";
 import LemonadeSelection from "../../component/lemonade-seleciton/lemonade-selection.component";
-import { LEMONADE_DATA } from "./lemonade-data";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 import Form from "react-bootstrap/Form";
@@ -9,9 +8,8 @@ import Form from "react-bootstrap/Form";
 class FormPage extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      lemonades: LEMONADE_DATA,
+      lemonades: this.props.lemonades,
       date: "",
       time: "",
       show: false,
@@ -19,6 +17,10 @@ class FormPage extends React.Component {
       showRemove: false,
       newDrink: {},
     };
+  }
+
+  componentWillUnmount() {
+    this.props.updateDrinks(this.state.lemonades);
   }
 
   handleChange = (value, name) => {

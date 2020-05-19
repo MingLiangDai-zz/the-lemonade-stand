@@ -1,5 +1,5 @@
 import React from "react";
-import { EMPLOYEE_DATA } from "./employee-data";
+import { EMPLOYEE_DATA } from "../../data-files/employee-data";
 
 import ReportSection from "../../component/report-section/report-section.component";
 
@@ -12,9 +12,8 @@ import Form from "react-bootstrap/Form";
 class Report extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      employees: EMPLOYEE_DATA,
+      employees: this.props.employees,
       startDate: "",
       startTime: "",
       endDate: "",
@@ -26,6 +25,10 @@ class Report extends React.Component {
       showRemove: false,
       newEmployee: {},
     };
+  }
+
+  componentWillUnmount() {
+    this.props.updateEmployees(this.state.employees);
   }
 
   submitReport = (e) => {
@@ -194,7 +197,7 @@ class Report extends React.Component {
                   this.setState({
                     newEmployee: {
                       ...this.state.newEmployee,
-                      price: parseInt(e.target.value),
+                      commission: parseInt(e.target.value),
                     },
                   })
                 }

@@ -9,6 +9,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Alert from "react-bootstrap/Alert";
 import Hero from "./component/hero/hero.component";
 
+import { LEMONADE_DATA } from "./data-files/lemonade-data";
+import { EMPLOYEE_DATA } from "./data-files/employee-data";
+
 class App extends React.Component {
   constructor() {
     super();
@@ -16,6 +19,8 @@ class App extends React.Component {
     this.state = {
       transactions: [],
       show: false,
+      employees: EMPLOYEE_DATA,
+      lemonades: LEMONADE_DATA,
     };
   }
 
@@ -26,6 +31,13 @@ class App extends React.Component {
         this.setState({ show: false });
       }, 5000);
     });
+  };
+
+  updateDrinks = (newLemonades) => {
+    this.setState({ lemonades: newLemonades }, () => console.log(this.state));
+  };
+  updateEmployees = (newEmployees) => {
+    this.setState({ employees: newEmployees }, () => console.log(this.state));
   };
 
   render() {
@@ -44,12 +56,24 @@ class App extends React.Component {
           <Route
             exact
             path="/sales/form"
-            render={() => <FormPage submitToReport={this.submitToReport} />}
+            render={() => (
+              <FormPage
+                submitToReport={this.submitToReport}
+                lemonades={this.state.lemonades}
+                updateDrinks={this.updateDrinks}
+              />
+            )}
           />
           <Route
             exact
             path="/sales/report"
-            render={() => <Report transactions={this.state.transactions} />}
+            render={() => (
+              <Report
+                transactions={this.state.transactions}
+                employees={this.state.employees}
+                updateEmployees={this.updateEmployees}
+              />
+            )}
           />
           <Route exact path="/" component={Hero} />
         </Switch>

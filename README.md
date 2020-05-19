@@ -1,5 +1,24 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project was made for a front end coding challenge presented by a company that I applied for. 
+
+## Installation Instructions
+
+To install and run the project locally, please following the steps below:
+1. Clone or download this repository to your computer. 
+2. Open the project folder on a code editor (in this case, I used VS Code)
+3. On the terminal, run `yarn start`
+
+In the case that the project does not open successfully, please make sure that the following components are installed on your computer:
+- Node.js
+- React
+- npm / yarn (in this case, I use yarn as the package manager so I recommend using yarn to avoid any potential errors)
+- node-sass (run on terminal -> `yarn add node-sass`)
+- react-router-dom and react-router (run on terminal -> `yarn add react-router-dom react-router`)
+- react-bootstrap and bootstrap (run on terminal -> `yarn add react-bootstrap bootstrap`)
+
+If there are still errors, feel free to visit https://lemonade-stand-demo.herokuapp.com/ for a demo of the project.
+
 ## Available Scripts
 
 In the project directory, you can run:
