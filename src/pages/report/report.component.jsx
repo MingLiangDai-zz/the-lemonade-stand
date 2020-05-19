@@ -1,5 +1,4 @@
 import React from "react";
-import { EMPLOYEE_DATA } from "../../data-files/employee-data";
 
 import ReportSection from "../../component/report-section/report-section.component";
 
