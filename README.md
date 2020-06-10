@@ -1,3 +1,6 @@
+## Link to Django Implementaion: https://github.com/MingLiangDai/the-lemonade-stand-django-implementation
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 This project was made for a front end coding challenge presented by a company that I applied for. 
