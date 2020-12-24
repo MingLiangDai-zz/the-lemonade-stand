@@ -4,6 +4,7 @@ import LemonadeSelection from "../../component/lemonade-seleciton/lemonade-selec
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 import Form from "react-bootstrap/Form";
+import { Container, Row, Col } from "react-bootstrap";
 
 class FormPage extends React.Component {
   constructor(props) {
@@ -115,7 +116,7 @@ class FormPage extends React.Component {
         {/* Add a drink /////////////////////////////////////////////////////////*/}
         <Alert
           show={this.state.showAdd}
-          variant="success"
+          variant="custom"
           dismissible={true}
           onClose={() => this.setState({ showAdd: false })}
         >
@@ -173,7 +174,7 @@ class FormPage extends React.Component {
               />
               <Form.Text className="text-muted">Price of the item</Form.Text>
             </Form.Group>
-            <Button variant="success" type="submit">
+            <Button variant="custom" type="submit">
               Add
             </Button>
           </Form>
@@ -212,30 +213,59 @@ class FormPage extends React.Component {
                 handleChange={this.handleChange}
               />
             ))}
+
+            <Container style={{ maxWidth: "750px" }}>
+              <Row className="mb-2">
+                <Col sm="6">
+                  <Button
+                    variant="custom"
+                    className="w-100"
+                    onClick={this.addToMenu}
+                  >
+                    Add To Menu
+                  </Button>
+                </Col>
+                <Col sm="6">
+                  <Button
+                    className="w-100"
+                    variant="custom1"
+                    onClick={() => this.setState({ showRemove: true })}
+                  >
+                    Remove Drinks
+                  </Button>
+                </Col>
+              </Row>
+            </Container>
           </div>
-          <div className="footer">
-            <h4>
-              Total: $
-              {this.state.lemonades
-                .reduce((accul, lemonade) => {
-                  const quantity = lemonade.quantity
-                    ? parseInt(lemonade.quantity)
-                    : 0;
-                  return accul + quantity * lemonade.price;
-                }, 0)
-                .toFixed(2)}
-            </h4>
-            <Button type="submit">Submit Transaction</Button>
-            <Button
-              variant="danger"
-              onClick={() => this.setState({ showRemove: true })}
-            >
-              Remove Drinks
-            </Button>
-            <Button variant="success" onClick={this.addToMenu}>
-              Add To Menu
-            </Button>
-          </div>
+
+          <Container style={{ maxWidth: "1000px" }}>
+            <Row className="mb-2">
+              <Col
+                className="d-flex justify-content-between"
+                style={{ color: "rgb(52, 58, 64)" }}
+              >
+                <h4 className="text-muted">Total:</h4>
+                <h4>
+                  $
+                  {this.state.lemonades
+                    .reduce((accul, lemonade) => {
+                      const quantity = lemonade.quantity
+                        ? parseInt(lemonade.quantity)
+                        : 0;
+                      return accul + quantity * lemonade.price;
+                    }, 0)
+                    .toFixed(2)}
+                </h4>
+              </Col>
+            </Row>
+            <Row className="mb-2">
+              <Col className="d-flex justify-content-end">
+                <Button variant="custom" type="submit">
+                  Submit Transaction
+                </Button>
+              </Col>
+            </Row>
+          </Container>
         </form>
       </div>
     );

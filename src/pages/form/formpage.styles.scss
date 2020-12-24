@@ -14,10 +14,10 @@
   justify-content: space-around;
 }
 
-.footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+.point {
+  margin: 0 auto;
+  padding: 10px 0 10px 5px;
+  &:hover {
+    background-color: rgb(242, 185, 190);
+  }
 }

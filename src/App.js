@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import FormPage from "./pages/form/formpage.component";
 import Report from "./pages/report/report.component";
 import { Switch, Route } from "react-router-dom";
@@ -43,6 +43,38 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <style type="text/css">
+          {`
+    .btn-custom {
+      background-color: rgb(0,128,128);
+      color: white;
+    }
+    .btn-custom:hover {
+      background-color: rgb(0,100,100);
+      color: white;
+    }
+
+    .btn-custom1 {
+      background-color: rgb(205, 205, 205);
+      color: rgb(52,58,64);
+    }
+    .btn-custom1:hover {
+      background-color: rgb(180, 180, 180);
+      color: rgb(52,58,64);
+    }
+
+    .btn-custom2 {
+      background-color: rgb(245, 245, 245);
+      color: rgb(52,58,64);
+      border: 1px solid rgb(52,58,64);
+    }
+    .btn-custom2:hover {
+      background-color: rgb(52,58,64);
+      color: white;
+      border: 1px solid rgb(52,58,64);
+    }
+    `}
+        </style>
         <Header />
         <Alert
           show={this.state.show}
