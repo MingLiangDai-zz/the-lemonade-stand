@@ -7,6 +7,7 @@ import "./report.styles.scss";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 import Form from "react-bootstrap/Form";
+import { Container, Row, Col } from "react-bootstrap";
 
 class Report extends React.Component {
   constructor(props) {
@@ -99,7 +100,7 @@ class Report extends React.Component {
 
   render() {
     return (
-      <div className="report">
+      <Container style={{ maxWidth: "1000px" }} className="report">
         <Alert
           show={this.state.showSuccess}
           variant="success"
@@ -205,12 +206,11 @@ class Report extends React.Component {
                 Commission rate of the new employee
               </Form.Text>
             </Form.Group>
-            <Button variant="success" type="submit">
+            <Button variant="custom" type="submit">
               Add
             </Button>
           </Form>
         </Alert>
-
         <form onSubmit={this.submitReport}>
           <div className="inputs">
             <div>
@@ -269,25 +269,35 @@ class Report extends React.Component {
                 ))}
               </select>
             </div>
-            <div>
-              <Button type="submit">Submit Report</Button>
-              <Button
-                variant="danger"
-                onClick={() => this.setState({ showRemove: true })}
-              >
-                Remove Employees
-              </Button>
-              <Button
-                variant="success"
-                onClick={() => this.setState({ showAdd: true })}
-              >
-                Add Employee
+            <div className="d-flex justify-content-end">
+              <Button type="submit" variant="custom">
+                Submit Report
               </Button>
             </div>
           </div>
         </form>
+        <Row>
+          <Col className="mb-2">
+            <Button
+              className="w-100"
+              variant="custom"
+              onClick={() => this.setState({ showAdd: true })}
+            >
+              Add Employees
+            </Button>
+          </Col>
+          <Col className="mb-2">
+            <Button
+              className="w-100"
+              variant="custom1"
+              onClick={() => this.setState({ showRemove: true })}
+            >
+              Remove Employees
+            </Button>
+          </Col>
+        </Row>
         <ReportSection employees={this.state.employees} />
-      </div>
+      </Container>
     );
   }
 }

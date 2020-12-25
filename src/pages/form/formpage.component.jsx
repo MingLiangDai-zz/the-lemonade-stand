@@ -80,7 +80,7 @@ class FormPage extends React.Component {
 
   render() {
     return (
-      <div className="formpage">
+      <Container style={{ maxWidth: "1000px" }} className="formpage">
         <Alert
           show={this.state.show}
           variant="danger"
@@ -116,7 +116,7 @@ class FormPage extends React.Component {
         {/* Add a drink /////////////////////////////////////////////////////////*/}
         <Alert
           show={this.state.showAdd}
-          variant="custom"
+          variant="success"
           dismissible={true}
           onClose={() => this.setState({ showAdd: false })}
         >
@@ -185,26 +185,30 @@ class FormPage extends React.Component {
             this.submitTransaction();
           }}
         >
-          <div className="date">
-            <label>Pick date: </label>
-            <input
-              id="date"
-              type="date"
-              name="date"
-              value={this.state.date}
-              onChange={(e) => this.setState({ date: e.target.value })}
-              required
-            />
-            <label>Pick time of transaction:</label>
-            <input
-              id="time"
-              type="time"
-              name="time"
-              value={this.state.time}
-              onChange={(e) => this.setState({ time: e.target.value })}
-              required
-            />
-          </div>
+          <Row>
+            <Col sm="6" className="d-flex justify-content-between">
+              <label>Pick date: </label>
+              <input
+                id="date"
+                type="date"
+                name="date"
+                value={this.state.date}
+                onChange={(e) => this.setState({ date: e.target.value })}
+                required
+              />
+            </Col>
+            <Col sm="6" className="d-flex justify-content-between">
+              <label>Pick time of transaction:</label>
+              <input
+                id="time"
+                type="time"
+                name="time"
+                value={this.state.time}
+                onChange={(e) => this.setState({ time: e.target.value })}
+                required
+              />
+            </Col>
+          </Row>
           <div className="lemonade-gallery">
             {this.state.lemonades.map((drink) => (
               <LemonadeSelection
@@ -213,29 +217,6 @@ class FormPage extends React.Component {
                 handleChange={this.handleChange}
               />
             ))}
-
-            <Container style={{ maxWidth: "750px" }}>
-              <Row className="mb-2">
-                <Col sm="6">
-                  <Button
-                    variant="custom"
-                    className="w-100"
-                    onClick={this.addToMenu}
-                  >
-                    Add To Menu
-                  </Button>
-                </Col>
-                <Col sm="6">
-                  <Button
-                    className="w-100"
-                    variant="custom1"
-                    onClick={() => this.setState({ showRemove: true })}
-                  >
-                    Remove Drinks
-                  </Button>
-                </Col>
-              </Row>
-            </Container>
           </div>
 
           <Container style={{ maxWidth: "1000px" }}>
@@ -259,6 +240,28 @@ class FormPage extends React.Component {
               </Col>
             </Row>
             <Row className="mb-2">
+              <Col>
+                <Row>
+                  <Col sm="6">
+                    <Button
+                      variant="custom"
+                      className="w-100"
+                      onClick={this.addToMenu}
+                    >
+                      Add To Menu
+                    </Button>
+                  </Col>
+                  <Col sm="6">
+                    <Button
+                      className="w-100"
+                      variant="custom1"
+                      onClick={() => this.setState({ showRemove: true })}
+                    >
+                      Remove Drinks
+                    </Button>
+                  </Col>
+                </Row>
+              </Col>
               <Col className="d-flex justify-content-end">
                 <Button variant="custom" type="submit">
                   Submit Transaction
@@ -267,7 +270,7 @@ class FormPage extends React.Component {
             </Row>
           </Container>
         </form>
-      </div>
+      </Container>
     );
   }
 }
