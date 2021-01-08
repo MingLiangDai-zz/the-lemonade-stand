@@ -1,6 +1,5 @@
 import React from "react";
 import "./lemonade-selection.styles.scss";
-import { Container, Row, Col } from "react-bootstrap";
 const LemonadeSelection = ({ drink, handleChange }) => {
   const { name, price, imageUrl, quantity } = drink;
   return (

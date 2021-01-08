@@ -1,7 +1,7 @@
 import React from "react";
 import "./report-section.styles.scss";
 import TableEntry from "../table-entry/table-entry.compoennt";
-import { Container, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 const ReportSection = ({ employees }) => {
   const reportableEmployees = employees.filter((employee) => employee.sales);
 
