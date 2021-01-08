@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/the-lemonade-stand/static/css/main.5e9a8a27.chunk.css",
-    "main.js": "/the-lemonade-stand/static/js/main.c74ad20c.chunk.js",
-    "main.js.map": "/the-lemonade-stand/static/js/main.c74ad20c.chunk.js.map",
+    "main.js": "/the-lemonade-stand/static/js/main.399c23b4.chunk.js",
+    "main.js.map": "/the-lemonade-stand/static/js/main.399c23b4.chunk.js.map",
     "runtime-main.js": "/the-lemonade-stand/static/js/runtime-main.8be1f750.js",
     "runtime-main.js.map": "/the-lemonade-stand/static/js/runtime-main.8be1f750.js.map",
     "static/css/2.ace36aee.chunk.css": "/the-lemonade-stand/static/css/2.ace36aee.chunk.css",
     "static/js/2.03493dc5.chunk.js": "/the-lemonade-stand/static/js/2.03493dc5.chunk.js",
     "static/js/2.03493dc5.chunk.js.map": "/the-lemonade-stand/static/js/2.03493dc5.chunk.js.map",
     "index.html": "/the-lemonade-stand/index.html",
-    "precache-manifest.5b604e4d8952704fa7ccfad0970a4595.js": "/the-lemonade-stand/precache-manifest.5b604e4d8952704fa7ccfad0970a4595.js",
+    "precache-manifest.39c5b7a20f824309aac99d10ad54a6b7.js": "/the-lemonade-stand/precache-manifest.39c5b7a20f824309aac99d10ad54a6b7.js",
     "service-worker.js": "/the-lemonade-stand/service-worker.js",
     "static/css/2.ace36aee.chunk.css.map": "/the-lemonade-stand/static/css/2.ace36aee.chunk.css.map",
     "static/css/main.5e9a8a27.chunk.css.map": "/the-lemonade-stand/static/css/main.5e9a8a27.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.ace36aee.chunk.css",
     "static/js/2.03493dc5.chunk.js",
     "static/css/main.5e9a8a27.chunk.css",
-    "static/js/main.c74ad20c.chunk.js"
+    "static/js/main.399c23b4.chunk.js"
   ]
 }

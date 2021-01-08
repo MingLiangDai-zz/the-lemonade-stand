@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "deb75b2237fae05c4f047588a199aab6",
+    "revision": "6f7392b9e33bb9da91d8fa522344b748",
     "url": "/the-lemonade-stand/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/the-lemonade-stand/static/css/2.ace36aee.chunk.css"
   },
   {
-    "revision": "a167b40a059034b58e03",
+    "revision": "161251f44fa920615237",
     "url": "/the-lemonade-stand/static/css/main.5e9a8a27.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/the-lemonade-stand/static/js/2.03493dc5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a167b40a059034b58e03",
-    "url": "/the-lemonade-stand/static/js/main.c74ad20c.chunk.js"
+    "revision": "161251f44fa920615237",
+    "url": "/the-lemonade-stand/static/js/main.399c23b4.chunk.js"
   },
   {
     "revision": "f97ef677300413f53636",
